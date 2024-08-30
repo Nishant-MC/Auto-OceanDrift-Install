@@ -5,10 +5,10 @@ The goal is to get a simple and idiot-proof script to install the OceanDrift pro
 
 # Needed Subscripts
 
-1. get-python (.cmd) - IN-PROGRESS, UNTESTED
+1. get-python (.cmd) - DONE
    - Downloads and installs Python 3.12 onto the machine
-   - Updates PATH env variable if required
-   - Uses py launcher to get pip
+   - Prepends Python folders to the PATH env variable
+   - Cleans up the Python installer .exe
 
 2. download-project (.cmd) - DONE
    - Downloads a .ZIP package of the OceanDrift project
@@ -23,4 +23,4 @@ The goal is to get a simple and idiot-proof script to install the OceanDrift pro
    - Runs drift_app
    - Invokes deactivate
   
-# CURRENT PROGRESS: 1/4
+# CURRENT PROGRESS: 2/4
