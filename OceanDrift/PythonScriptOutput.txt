@@ -1,0 +1,990 @@
+[32m20:07:22[0m [1;35mDEBUG  [0m [34mopendrift.config:168:[0m [32mAdding 18 config items from __init__[0m
+[32m20:07:22[0m [1;35mDEBUG  [0m [34mopendrift.config:178:[0m [32m  Overwriting config item readers:max_number_of_fails[0m
+[32m20:07:22[0m [1;35mDEBUG  [0m [34mopendrift.config:168:[0m [32mAdding 5 config items from __init__[0m
+[32m20:07:22[0m [1;35mINFO   [0m [34mopendrift.models.basemodel:515:[0m OpenDriftSimulation initialised (version 1.11.13)
+[32m20:07:22[0m [1;35mDEBUG  [0m [34mopendrift.config:168:[0m [32mAdding 15 config items from oceandrift[0m
+[32m20:07:22[0m [1;35mDEBUG  [0m [34mopendrift.config:178:[0m [32m  Overwriting config item seed:z[0m
+[32m20:07:22[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:119:[0m [32mFinding coordinate variables.[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:134:[0m [32mParsing CF grid mapping dictionary: {'grid_mapping_name': 'polar_stereographic', 'straight_vertical_longitude_from_pole': 70.0, 'latitude_of_projection_origin': 90.0, 'standard_parallel': 60.0, 'false_easting': 3192800.0, 'false_northing': 1784000.0, 'semi_major_axis': 6378137.0, 'semi_minor_axis': 6356752.3142, 'proj4': '+proj=stere +lat_0=90 +lat_ts=60 +lon_0=70 +x_0=3192800 +y_0=1784000 +a=6378137 +b=6356752.3142 +units=m +no_defs +type=crs'}[0m
+[32m20:07:34[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:314:[0m Detected dimensions: {'x': 'X', 'y': 'Y', 'z': 'depth', 'time': 'time'}
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:350:[0m [32mSkipped variables without standard_name: ['angle', 'tke', 'ubar', 'vbar'][0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 25 for reader https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be, assuming a maximum average speed of 5 m/s and time span of 1:00:00[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader:176:[0m [32mVariable mapping: ['sea_floor_depth_below_sea_level'] -> ['land_binary_mask'] is not activated[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['x_wind', 'y_wind'] -> wind_speed[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['x_sea_water_velocity', 'y_sea_water_velocity'] -> sea_water_speed[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: /vol/vvfelles/opendrift/forcing_data/norkyst/norkyst_aggregate.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: /vol/vvfelles/opendrift/forcing_data/meps/meps_aggregate.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: /vol/vvfelles/opendrift/forcing_data/ecmwf/ecmwf_aggregate.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: /lustre/storeB/project/metproduction/products/norkyst/NorKyst-800m_ZDEPTHS_his_00.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: /lustre/storeB/project/metproduction/products/meps/thredds/latest/meps_lagged_6_h_latest_2_5km_latest.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: https://thredds.met.no/thredds/dodsC/mepslatest/meps_lagged_6_h_latest_2_5km_latest.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: https://thredds.met.no/thredds/dodsC/fou-hi/barents_eps_zdepth_be[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: https://thredds.met.no/thredds/dodsC/cmems/mywavewam3km/dataset-wam-arctic-1hr3km-be.ncml[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: https://thredds.met.no/thredds/dodsC/ww3_4km_agg[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: https://thredds.met.no/thredds/dodsC/cmems/topaz6/dataset-topaz6-arc-15min-3km-be.ncml[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: /vol/vvfelles/opendrift/forcing_data/topaz6/topaz6_aggregate.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: https://thredds.met.no/thredds/dodsC/aromearcticlatest/latest/arome_arctic_lagged_12_h_latest_2_5km_latest.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: /vol/vvfelles/opendrift/forcing_data/aromearctic/aromearctic_aggregate.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: cmems_obs-wind_glo_phy_nrt_l4_0.125deg_PT1H[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: cmems_mod_glo_wav_anfc_0.083deg_PT3H-i[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: cmems_mod_glo_phy_anfc_merged-uv_PT1H-i[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: /vol/vvfelles/opendrift/forcing_data/mercator/mercator_aggregate.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:38:[0m [32mDelaying initialisation of LazyReader: https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: /vol/vvfelles/opendrift/forcing_data/norkyst/norkyst_aggregate.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: /vol/vvfelles/opendrift/forcing_data/meps/meps_aggregate.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: /vol/vvfelles/opendrift/forcing_data/ecmwf/ecmwf_aggregate.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: /lustre/storeB/project/metproduction/products/norkyst/NorKyst-800m_ZDEPTHS_his_00.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: /lustre/storeB/project/metproduction/products/meps/thredds/latest/meps_lagged_6_h_latest_2_5km_latest.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: https://thredds.met.no/thredds/dodsC/mepslatest/meps_lagged_6_h_latest_2_5km_latest.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: https://thredds.met.no/thredds/dodsC/fou-hi/barents_eps_zdepth_be[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: https://thredds.met.no/thredds/dodsC/cmems/mywavewam3km/dataset-wam-arctic-1hr3km-be.ncml[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: https://thredds.met.no/thredds/dodsC/ww3_4km_agg[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: https://thredds.met.no/thredds/dodsC/cmems/topaz6/dataset-topaz6-arc-15min-3km-be.ncml[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: /vol/vvfelles/opendrift/forcing_data/topaz6/topaz6_aggregate.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: https://thredds.met.no/thredds/dodsC/aromearcticlatest/latest/arome_arctic_lagged_12_h_latest_2_5km_latest.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: /vol/vvfelles/opendrift/forcing_data/aromearctic/aromearctic_aggregate.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: cmems_obs-wind_glo_phy_nrt_l4_0.125deg_PT1H[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: cmems_mod_glo_wav_anfc_0.083deg_PT3H-i[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: cmems_mod_glo_phy_anfc_merged-uv_PT1H-i[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: /vol/vvfelles/opendrift/forcing_data/mercator/mercator_aggregate.nc[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader LazyReader: https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd[0m
+[32m20:07:34[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader:176:[0m [32mVariable mapping: ['sea_floor_depth_below_sea_level'] -> ['land_binary_mask'] is not activated[0m
+[32m20:07:41[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:328:[0m [32mAdded reader global_landmask[0m
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:245:[0m Fallback values will be used for the following variables which have no readers: 
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	sea_surface_height: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	ocean_vertical_diffusivity: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	sea_surface_wave_significant_height: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	sea_surface_wave_stokes_drift_x_velocity: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	sea_surface_wave_stokes_drift_y_velocity: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	sea_surface_wave_period_at_variance_spectral_density_maximum: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	sea_surface_swell_wave_to_direction: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	sea_surface_swell_wave_peak_period_from_variance_spectral_density: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	sea_surface_swell_wave_significant_height: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	sea_surface_wind_wave_to_direction: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	sea_surface_wind_wave_mean_period: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	sea_surface_wind_wave_significant_height: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	surface_downward_x_stress: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	surface_downward_y_stress: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	turbulent_kinetic_energy: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	turbulent_generic_length_scale: 0.000000
+[32m20:07:41[0m [1;35mINFO   [0m [34mopendrift.models.basemodel.environment:248:[0m 	ocean_mixed_layer_thickness: 50.000000
+[32m20:07:41[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:95:[0m [32mChanged mode from Mode.Config to Mode.Ready[0m
+[32m20:07:41[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:95:[0m [32mChanged mode from Mode.Ready to Mode.Run[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:1778:[0m [32m
+------------------------------------------------------
+Software and hardware:
+  OpenDrift version 1.11.13
+  Platform: Windows, 11
+  15.710990905761719 GB memory
+  16 processors (Intel64 Family 6 Model 154 Stepping 3, GenuineIntel)
+  NumPy version 1.26.4
+  SciPy version 1.14.1
+  Matplotlib version 3.9.2
+  NetCDF4 version 1.7.1.post2
+  Xarray version 2024.7.0
+  ADIOS (adios_db) version : Not installed
+  Copernicusmarine version 1.3.2
+  Python version 3.12.5 (tags/v3.12.5:ff3bc82, Aug  6 2024, 20:45:27) [MSC v.1940 64 bit (AMD64)]
+------------------------------------------------------
+[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:1910:[0m [32mFinalizing environment and preparing readers for simulation coverage ([-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462]) and time (2024-08-23 20:07:00 to 2024-08-23 21:07:00)[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:153:[0m [32mClearing cache for reader https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be before starting new simulation[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 11 for reader https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be, assuming a maximum average speed of 2 m/s and time span of 1:00:00[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:549:[0m [32mNothing more to prepare for https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: /vol/vvfelles/opendrift/forcing_data/norkyst/norkyst_aggregate.nc for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: /vol/vvfelles/opendrift/forcing_data/meps/meps_aggregate.nc for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: /vol/vvfelles/opendrift/forcing_data/ecmwf/ecmwf_aggregate.nc for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: /lustre/storeB/project/metproduction/products/norkyst/NorKyst-800m_ZDEPTHS_his_00.nc for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: /lustre/storeB/project/metproduction/products/meps/thredds/latest/meps_lagged_6_h_latest_2_5km_latest.nc for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: https://thredds.met.no/thredds/dodsC/mepslatest/meps_lagged_6_h_latest_2_5km_latest.nc for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: https://thredds.met.no/thredds/dodsC/fou-hi/barents_eps_zdepth_be for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: https://thredds.met.no/thredds/dodsC/cmems/mywavewam3km/dataset-wam-arctic-1hr3km-be.ncml for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: https://thredds.met.no/thredds/dodsC/ww3_4km_agg for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: https://thredds.met.no/thredds/dodsC/cmems/topaz6/dataset-topaz6-arc-15min-3km-be.ncml for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: /vol/vvfelles/opendrift/forcing_data/topaz6/topaz6_aggregate.nc for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: https://thredds.met.no/thredds/dodsC/aromearcticlatest/latest/arome_arctic_lagged_12_h_latest_2_5km_latest.nc for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: /vol/vvfelles/opendrift/forcing_data/aromearctic/aromearctic_aggregate.nc for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: cmems_obs-wind_glo_phy_nrt_l4_0.125deg_PT1H for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: cmems_mod_glo_wav_anfc_0.083deg_PT3H-i for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: cmems_mod_glo_phy_anfc_merged-uv_PT1H-i for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: /vol/vvfelles/opendrift/forcing_data/mercator/mercator_aggregate.nc for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing LazyReader: https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:180:[0m [32m	Preparing global_landmask for extent [-148.18731768222978, -18.058164349117796, -148.0054008236296, -17.886814364871462][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:549:[0m [32mNothing more to prepare for global_landmask[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.models.basemodel:936:[0m Using existing reader for land_binary_mask
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (too far north): https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['land_binary_mask'][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader global_landmask[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from global_landmask covering 100 elements[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.continuous:37:[0m [32mFetched env-before[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking land_binary_mask for invalid values[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:777:[0m [32m---------------------------------------[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:778:[0m [32mFinished processing all variable groups[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:903:[0m [32m------------ SUMMARY -------------[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    land_binary_mask: 0 (min) 0 (max)[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:907:[0m [32m---------------------------------[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.models.basemodel:947:[0m All points are in ocean
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:891:[0m [32mto be seeded: 100, already seeded 0[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:909:[0m [32mReleased 100 new elements.[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2037:[0m [32m======================================================================[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.models.basemodel:2038:[0m 2024-08-23 20:07:00 - step 1 of 4 - 100 active elements (0 deactivated)
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2044:[0m [32m0 elements scheduled.[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2046:[0m [32m======================================================================[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2057:[0m [32m		-17.9933 <- latitude  -> -17.95168[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2062:[0m [32m		-148.11913 <- longitude -> -148.0736[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2065:[0m [32m		z = 0.0[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2068:[0m [32m---------------------------------[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:581:[0m [32mVariables not covered by any reader: ['surface_downward_x_stress', 'sea_surface_wave_stokes_drift_x_velocity', 'sea_surface_wave_period_at_variance_spectral_density_maximum', 'sea_floor_depth_below_sea_level', 'surface_downward_y_stress', 'turbulent_generic_length_scale', 'ocean_vertical_diffusivity', 'sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment', 'turbulent_kinetic_energy', 'x_sea_water_velocity', 'x_wind', 'y_sea_water_velocity', 'upward_sea_water_velocity', 'sea_surface_wave_stokes_drift_y_velocity', 'ocean_mixed_layer_thickness', 'y_wind', 'sea_surface_height', 'sea_surface_wave_significant_height'][0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: /vol/vvfelles/opendrift/forcing_data/norkyst/norkyst_aggregate.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/norkyst/norkyst_aggregate.nc
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/norkyst/norkyst_aggregate.nc with <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:150:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/norkyst/norkyst_aggregate.nc
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:167:[0m Opening file with Dataset
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/norkyst/norkyst_aggregate.nc with <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:98:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/norkyst/norkyst_aggregate.nc
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:103:[0m Opening file with Dataset
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/norkyst/norkyst_aggregate.nc with <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:413:[0m [32mReader could not be initialised[0m
+[32m14:37:42[0m [1;35mWARNING[0m [34mopendrift.models.basemodel.environment:414:[0m [33mReader could not be initialised, and is discarded: LazyReader: /vol/vvfelles/opendrift/forcing_data/norkyst/norkyst_aggregate.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (could not be initialized): LazyReader: /vol/vvfelles/opendrift/forcing_data/norkyst/norkyst_aggregate.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: /vol/vvfelles/opendrift/forcing_data/meps/meps_aggregate.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/meps/meps_aggregate.nc
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/meps/meps_aggregate.nc with <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:150:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/meps/meps_aggregate.nc
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:167:[0m Opening file with Dataset
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/meps/meps_aggregate.nc with <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:98:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/meps/meps_aggregate.nc
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:103:[0m Opening file with Dataset
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/meps/meps_aggregate.nc with <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:413:[0m [32mReader could not be initialised[0m
+[32m14:37:42[0m [1;35mWARNING[0m [34mopendrift.models.basemodel.environment:414:[0m [33mReader could not be initialised, and is discarded: LazyReader: /vol/vvfelles/opendrift/forcing_data/meps/meps_aggregate.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (could not be initialized): LazyReader: /vol/vvfelles/opendrift/forcing_data/meps/meps_aggregate.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: /vol/vvfelles/opendrift/forcing_data/ecmwf/ecmwf_aggregate.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/ecmwf/ecmwf_aggregate.nc
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/ecmwf/ecmwf_aggregate.nc with <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:150:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/ecmwf/ecmwf_aggregate.nc
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:167:[0m Opening file with Dataset
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/ecmwf/ecmwf_aggregate.nc with <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:98:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/ecmwf/ecmwf_aggregate.nc
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:103:[0m Opening file with Dataset
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/ecmwf/ecmwf_aggregate.nc with <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:413:[0m [32mReader could not be initialised[0m
+[32m14:37:42[0m [1;35mWARNING[0m [34mopendrift.models.basemodel.environment:414:[0m [33mReader could not be initialised, and is discarded: LazyReader: /vol/vvfelles/opendrift/forcing_data/ecmwf/ecmwf_aggregate.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (could not be initialized): LazyReader: /vol/vvfelles/opendrift/forcing_data/ecmwf/ecmwf_aggregate.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: /lustre/storeB/project/metproduction/products/norkyst/NorKyst-800m_ZDEPTHS_his_00.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: /lustre/storeB/project/metproduction/products/norkyst/NorKyst-800m_ZDEPTHS_his_00.nc
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /lustre/storeB/project/metproduction/products/norkyst/NorKyst-800m_ZDEPTHS_his_00.nc with <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:150:[0m Opening dataset: /lustre/storeB/project/metproduction/products/norkyst/NorKyst-800m_ZDEPTHS_his_00.nc
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:167:[0m Opening file with Dataset
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /lustre/storeB/project/metproduction/products/norkyst/NorKyst-800m_ZDEPTHS_his_00.nc with <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:98:[0m Opening dataset: /lustre/storeB/project/metproduction/products/norkyst/NorKyst-800m_ZDEPTHS_his_00.nc
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:103:[0m Opening file with Dataset
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /lustre/storeB/project/metproduction/products/norkyst/NorKyst-800m_ZDEPTHS_his_00.nc with <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:413:[0m [32mReader could not be initialised[0m
+[32m14:37:42[0m [1;35mWARNING[0m [34mopendrift.models.basemodel.environment:414:[0m [33mReader could not be initialised, and is discarded: LazyReader: /lustre/storeB/project/metproduction/products/norkyst/NorKyst-800m_ZDEPTHS_his_00.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (could not be initialized): LazyReader: /lustre/storeB/project/metproduction/products/norkyst/NorKyst-800m_ZDEPTHS_his_00.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: /lustre/storeB/project/metproduction/products/meps/thredds/latest/meps_lagged_6_h_latest_2_5km_latest.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: /lustre/storeB/project/metproduction/products/meps/thredds/latest/meps_lagged_6_h_latest_2_5km_latest.nc
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /lustre/storeB/project/metproduction/products/meps/thredds/latest/meps_lagged_6_h_latest_2_5km_latest.nc with <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:150:[0m Opening dataset: /lustre/storeB/project/metproduction/products/meps/thredds/latest/meps_lagged_6_h_latest_2_5km_latest.nc
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:167:[0m Opening file with Dataset
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /lustre/storeB/project/metproduction/products/meps/thredds/latest/meps_lagged_6_h_latest_2_5km_latest.nc with <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:98:[0m Opening dataset: /lustre/storeB/project/metproduction/products/meps/thredds/latest/meps_lagged_6_h_latest_2_5km_latest.nc
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:103:[0m Opening file with Dataset
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /lustre/storeB/project/metproduction/products/meps/thredds/latest/meps_lagged_6_h_latest_2_5km_latest.nc with <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:413:[0m [32mReader could not be initialised[0m
+[32m14:37:42[0m [1;35mWARNING[0m [34mopendrift.models.basemodel.environment:414:[0m [33mReader could not be initialised, and is discarded: LazyReader: /lustre/storeB/project/metproduction/products/meps/thredds/latest/meps_lagged_6_h_latest_2_5km_latest.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (could not be initialized): LazyReader: /lustre/storeB/project/metproduction/products/meps/thredds/latest/meps_lagged_6_h_latest_2_5km_latest.nc[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be[0m
+[32m14:37:42[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:42[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be
+[32m14:37:45[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:119:[0m [32mFinding coordinate variables.[0m
+[32m14:37:45[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:134:[0m [32mParsing CF grid mapping dictionary: {'grid_mapping_name': 'polar_stereographic', 'straight_vertical_longitude_from_pole': 70.0, 'latitude_of_projection_origin': 90.0, 'standard_parallel': 60.0, 'false_easting': 3192800.0, 'false_northing': 1784000.0, 'semi_major_axis': 6378137.0, 'semi_minor_axis': 6356752.3142, 'proj4': '+proj=stere +lat_0=90 +lat_ts=60 +lon_0=70 +x_0=3192800 +y_0=1784000 +a=6378137 +b=6356752.3142 +units=m +no_defs +type=crs'}[0m
+[32m14:37:46[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:314:[0m Detected dimensions: {'x': 'X', 'y': 'Y', 'z': 'depth', 'time': 'time'}
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:350:[0m [32mSkipped variables without standard_name: ['angle', 'tke', 'ubar', 'vbar'][0m
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 25 for reader https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be, assuming a maximum average speed of 5 m/s and time span of 1:00:00[0m
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader:176:[0m [32mVariable mapping: ['sea_floor_depth_below_sea_level'] -> ['land_binary_mask'] is not activated[0m
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['x_wind', 'y_wind'] -> wind_speed[0m
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['x_sea_water_velocity', 'y_sea_water_velocity'] -> sea_water_speed[0m
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:153:[0m [32mClearing cache for reader https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be before starting new simulation[0m
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 11 for reader https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be, assuming a maximum average speed of 2 m/s and time span of 1:00:00[0m
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:549:[0m [32mNothing more to prepare for https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be[0m
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:72:[0m [32mReader initialised: https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be[0m
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 11 for reader https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be, assuming a maximum average speed of 2 m/s and time span of 1:00:00[0m
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (too far north): https://thredds.met.no/thredds/dodsC/sea/norkyst800m/1h/aggregate_be[0m
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:581:[0m [32mVariables not covered by any reader: ['surface_downward_x_stress', 'sea_surface_wave_stokes_drift_x_velocity', 'sea_surface_wave_period_at_variance_spectral_density_maximum', 'sea_floor_depth_below_sea_level', 'surface_downward_y_stress', 'turbulent_generic_length_scale', 'ocean_vertical_diffusivity', 'sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment', 'turbulent_kinetic_energy', 'x_sea_water_velocity', 'x_wind', 'y_sea_water_velocity', 'upward_sea_water_velocity', 'sea_surface_wave_stokes_drift_y_velocity', 'ocean_mixed_layer_thickness', 'y_wind', 'sea_surface_height', 'sea_surface_wave_significant_height'][0m
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: https://thredds.met.no/thredds/dodsC/mepslatest/meps_lagged_6_h_latest_2_5km_latest.nc[0m
+[32m14:37:46[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:46[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: https://thredds.met.no/thredds/dodsC/mepslatest/meps_lagged_6_h_latest_2_5km_latest.nc
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:119:[0m [32mFinding coordinate variables.[0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:231:[0m [32m30 ensemble members available[0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:134:[0m [32mParsing CF grid mapping dictionary: {'grid_mapping_name': 'lambert_conformal_conic', 'standard_parallel': array([63.3, 63.3]), 'longitude_of_central_meridian': 15.0, 'latitude_of_projection_origin': 63.3, 'earth_radius': 6371000.0}[0m
+[32m14:37:48[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:314:[0m Detected dimensions: {'time': 'time', 'x': 'x', 'y': 'y'}
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:350:[0m [32mSkipped variables without standard_name: ['fog_area_fraction'][0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 10 for reader https://thredds.met.no/thredds/dodsC/mepslatest/meps_lagged_6_h_latest_2_5km_latest.nc, assuming a maximum average speed of 5 m/s and time span of 1:00:00[0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader:176:[0m [32mVariable mapping: ['sea_floor_depth_below_sea_level'] -> ['land_binary_mask'] is not activated[0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['x_wind', 'y_wind'] -> wind_speed[0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:153:[0m [32mClearing cache for reader https://thredds.met.no/thredds/dodsC/mepslatest/meps_lagged_6_h_latest_2_5km_latest.nc before starting new simulation[0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 5 for reader https://thredds.met.no/thredds/dodsC/mepslatest/meps_lagged_6_h_latest_2_5km_latest.nc, assuming a maximum average speed of 2 m/s and time span of 1:00:00[0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:549:[0m [32mNothing more to prepare for https://thredds.met.no/thredds/dodsC/mepslatest/meps_lagged_6_h_latest_2_5km_latest.nc[0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:72:[0m [32mReader initialised: https://thredds.met.no/thredds/dodsC/mepslatest/meps_lagged_6_h_latest_2_5km_latest.nc[0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 5 for reader https://thredds.met.no/thredds/dodsC/mepslatest/meps_lagged_6_h_latest_2_5km_latest.nc, assuming a maximum average speed of 2 m/s and time span of 1:00:00[0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (too far north): https://thredds.met.no/thredds/dodsC/mepslatest/meps_lagged_6_h_latest_2_5km_latest.nc[0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:581:[0m [32mVariables not covered by any reader: ['surface_downward_x_stress', 'sea_surface_wave_stokes_drift_x_velocity', 'sea_surface_wave_period_at_variance_spectral_density_maximum', 'sea_floor_depth_below_sea_level', 'surface_downward_y_stress', 'turbulent_generic_length_scale', 'ocean_vertical_diffusivity', 'sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment', 'turbulent_kinetic_energy', 'x_sea_water_velocity', 'x_wind', 'y_sea_water_velocity', 'upward_sea_water_velocity', 'sea_surface_wave_stokes_drift_y_velocity', 'ocean_mixed_layer_thickness', 'y_wind', 'sea_surface_height', 'sea_surface_wave_significant_height'][0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: https://thredds.met.no/thredds/dodsC/fou-hi/barents_eps_zdepth_be[0m
+[32m14:37:48[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:48[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: https://thredds.met.no/thredds/dodsC/fou-hi/barents_eps_zdepth_be
+[32m14:37:52[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:119:[0m [32mFinding coordinate variables.[0m
+[32m14:37:52[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:134:[0m [32mParsing CF grid mapping dictionary: {'grid_mapping_name': 'lambert_conformal_conic', 'standard_parallel': array([77.5, 77.5], dtype=float32), 'longitude_of_central_meridian': -25.0, 'latitude_of_projection_origin': 77.5, 'earth_radius': 6371000.0, 'proj4': '+proj=lcc +lat_0=77.5 +lon_0=-25 +lat_1=77.5 +lat_2=77.5 +no_defs +R=6.371e+06'}[0m
+[32m14:37:53[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:314:[0m Detected dimensions: {'x': 'X', 'y': 'Y', 'z': 'depth', 'time': 'time'}
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:350:[0m [32mSkipped variables without standard_name: ['angle'][0m
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 10 for reader https://thredds.met.no/thredds/dodsC/fou-hi/barents_eps_zdepth_be, assuming a maximum average speed of 5 m/s and time span of 1:00:00[0m
+[32m14:37:53[0m [1;35mINFO   [0m [34mopendrift.readers.basereader:166:[0m Variable x_sea_water_velocity will be rotated from eastward_sea_water_velocity
+[32m14:37:53[0m [1;35mINFO   [0m [34mopendrift.readers.basereader:166:[0m Variable y_sea_water_velocity will be rotated from northward_sea_water_velocity
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader:176:[0m [32mVariable mapping: ['sea_floor_depth_below_sea_level'] -> ['land_binary_mask'] is not activated[0m
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['x_wind', 'y_wind'] -> wind_speed[0m
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['sea_ice_x_velocity', 'sea_ice_y_velocity'] -> sea_ice_speed[0m
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['x_sea_water_velocity', 'y_sea_water_velocity'] -> sea_water_speed[0m
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:153:[0m [32mClearing cache for reader https://thredds.met.no/thredds/dodsC/fou-hi/barents_eps_zdepth_be before starting new simulation[0m
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 5 for reader https://thredds.met.no/thredds/dodsC/fou-hi/barents_eps_zdepth_be, assuming a maximum average speed of 2 m/s and time span of 1:00:00[0m
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:549:[0m [32mNothing more to prepare for https://thredds.met.no/thredds/dodsC/fou-hi/barents_eps_zdepth_be[0m
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:72:[0m [32mReader initialised: https://thredds.met.no/thredds/dodsC/fou-hi/barents_eps_zdepth_be[0m
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 5 for reader https://thredds.met.no/thredds/dodsC/fou-hi/barents_eps_zdepth_be, assuming a maximum average speed of 2 m/s and time span of 1:00:00[0m
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (too far north): https://thredds.met.no/thredds/dodsC/fou-hi/barents_eps_zdepth_be[0m
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:581:[0m [32mVariables not covered by any reader: ['surface_downward_x_stress', 'sea_surface_wave_stokes_drift_x_velocity', 'sea_surface_wave_period_at_variance_spectral_density_maximum', 'sea_floor_depth_below_sea_level', 'surface_downward_y_stress', 'turbulent_generic_length_scale', 'ocean_vertical_diffusivity', 'sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment', 'turbulent_kinetic_energy', 'x_sea_water_velocity', 'x_wind', 'y_sea_water_velocity', 'upward_sea_water_velocity', 'sea_surface_wave_stokes_drift_y_velocity', 'ocean_mixed_layer_thickness', 'y_wind', 'sea_surface_height', 'sea_surface_wave_significant_height'][0m
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: https://thredds.met.no/thredds/dodsC/cmems/mywavewam3km/dataset-wam-arctic-1hr3km-be.ncml[0m
+[32m14:37:53[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:37:53[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: https://thredds.met.no/thredds/dodsC/cmems/mywavewam3km/dataset-wam-arctic-1hr3km-be.ncml
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:119:[0m [32mFinding coordinate variables.[0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:134:[0m [32mParsing CF grid mapping dictionary: {'grid_mapping_name': 'polar_stereographic', 'scale_factor_at_projection_origin': 1.0, 'straight_vertical_longitude_from_pole': -45.0, 'latitude_of_projection_origin': 90.0, 'earth_radius': 6371000.0, 'proj4': '+proj=stere +lon_0=-45 +lat_0=90 +k=1 +R=6371000 +no_defs'}[0m
+[32m14:38:01[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:314:[0m Detected dimensions: {'y': 'rlat', 'x': 'rlon', 'time': 'time'}
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 8 for reader https://thredds.met.no/thredds/dodsC/cmems/mywavewam3km/dataset-wam-arctic-1hr3km-be.ncml, assuming a maximum average speed of 5 m/s and time span of 1:00:00[0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader:176:[0m [32mVariable mapping: ['sea_floor_depth_below_sea_level'] -> ['land_binary_mask'] is not activated[0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['sea_water_speed', 'sea_water_to_direction'] -> x_sea_water_velocity[0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['sea_water_speed', 'sea_water_to_direction'] -> y_sea_water_velocity[0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['sea_surface_wave_stokes_drift_x_velocity', 'sea_surface_wave_stokes_drift_y_velocity'] -> sea_surface_wave_stokes_drift_speed[0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:153:[0m [32mClearing cache for reader https://thredds.met.no/thredds/dodsC/cmems/mywavewam3km/dataset-wam-arctic-1hr3km-be.ncml before starting new simulation[0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 5 for reader https://thredds.met.no/thredds/dodsC/cmems/mywavewam3km/dataset-wam-arctic-1hr3km-be.ncml, assuming a maximum average speed of 2 m/s and time span of 1:00:00[0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:549:[0m [32mNothing more to prepare for https://thredds.met.no/thredds/dodsC/cmems/mywavewam3km/dataset-wam-arctic-1hr3km-be.ncml[0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:72:[0m [32mReader initialised: https://thredds.met.no/thredds/dodsC/cmems/mywavewam3km/dataset-wam-arctic-1hr3km-be.ncml[0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 5 for reader https://thredds.met.no/thredds/dodsC/cmems/mywavewam3km/dataset-wam-arctic-1hr3km-be.ncml, assuming a maximum average speed of 2 m/s and time span of 1:00:00[0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (too far north): https://thredds.met.no/thredds/dodsC/cmems/mywavewam3km/dataset-wam-arctic-1hr3km-be.ncml[0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:581:[0m [32mVariables not covered by any reader: ['surface_downward_x_stress', 'sea_surface_wave_stokes_drift_x_velocity', 'sea_surface_wave_period_at_variance_spectral_density_maximum', 'sea_floor_depth_below_sea_level', 'surface_downward_y_stress', 'turbulent_generic_length_scale', 'ocean_vertical_diffusivity', 'sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment', 'turbulent_kinetic_energy', 'x_sea_water_velocity', 'x_wind', 'y_sea_water_velocity', 'upward_sea_water_velocity', 'sea_surface_wave_stokes_drift_y_velocity', 'ocean_mixed_layer_thickness', 'y_wind', 'sea_surface_height', 'sea_surface_wave_significant_height'][0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: https://thredds.met.no/thredds/dodsC/ww3_4km_agg[0m
+[32m14:38:01[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:38:01[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: https://thredds.met.no/thredds/dodsC/ww3_4km_agg
+[32m14:38:16[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:119:[0m [32mFinding coordinate variables.[0m
+[32m14:38:16[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:134:[0m [32mParsing CF grid mapping dictionary: {'proj4': '+proj=ob_tran +o_proj=longlat +lon_0=-40 +o_lat_p=22 +R=6.371e+06 +no_defs', 'grid_mapping_name': 'rotated_latitude_longitude', 'grid_north_pole_longitude': 140.0, 'grid_north_pole_latitude': 22.0, 'earth_radius': 6371000.0}[0m
+[32m14:38:17[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:314:[0m Detected dimensions: {'y': 'rlat', 'x': 'rlon', 'time': 'time'}
+[32m14:38:17[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 7 for reader https://thredds.met.no/thredds/dodsC/ww3_4km_agg, assuming a maximum average speed of 5 m/s and time span of 1:00:00[0m
+[32m14:38:17[0m [1;35mINFO   [0m [34mopendrift.readers.basereader:166:[0m Variable x_wind will be rotated from eastward_wind
+[32m14:38:17[0m [1;35mINFO   [0m [34mopendrift.readers.basereader:166:[0m Variable y_wind will be rotated from northward_wind
+[32m14:38:17[0m [1;35mINFO   [0m [34mopendrift.readers.basereader:166:[0m Variable sea_surface_wave_stokes_drift_x_velocity will be rotated from eastward_surface_stokes_drift
+[32m14:38:17[0m [1;35mINFO   [0m [34mopendrift.readers.basereader:166:[0m Variable sea_surface_wave_stokes_drift_y_velocity will be rotated from northward_surface_stokes_drift
+[32m14:38:17[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader:176:[0m [32mVariable mapping: ['sea_floor_depth_below_sea_level'] -> ['land_binary_mask'] is not activated[0m
+[32m14:38:17[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['sea_surface_wave_stokes_drift_x_velocity', 'sea_surface_wave_stokes_drift_y_velocity'] -> sea_surface_wave_stokes_drift_speed[0m
+[32m14:38:17[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:153:[0m [32mClearing cache for reader https://thredds.met.no/thredds/dodsC/ww3_4km_agg before starting new simulation[0m
+[32m14:38:17[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 4 for reader https://thredds.met.no/thredds/dodsC/ww3_4km_agg, assuming a maximum average speed of 2 m/s and time span of 1:00:00[0m
+[32m14:38:17[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:549:[0m [32mNothing more to prepare for https://thredds.met.no/thredds/dodsC/ww3_4km_agg[0m
+[32m14:38:17[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:72:[0m [32mReader initialised: https://thredds.met.no/thredds/dodsC/ww3_4km_agg[0m
+[32m14:38:17[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 4 for reader https://thredds.met.no/thredds/dodsC/ww3_4km_agg, assuming a maximum average speed of 2 m/s and time span of 1:00:00[0m
+[32m14:38:17[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:114:[0m [32mNB: Converting degrees to radians due to ob_tran srs[0m
+[32m14:38:17[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (too far north): https://thredds.met.no/thredds/dodsC/ww3_4km_agg[0m
+[32m14:38:17[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:581:[0m [32mVariables not covered by any reader: ['surface_downward_x_stress', 'sea_surface_wave_stokes_drift_x_velocity', 'sea_surface_wave_period_at_variance_spectral_density_maximum', 'sea_floor_depth_below_sea_level', 'surface_downward_y_stress', 'turbulent_generic_length_scale', 'ocean_vertical_diffusivity', 'sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment', 'turbulent_kinetic_energy', 'x_sea_water_velocity', 'x_wind', 'y_sea_water_velocity', 'upward_sea_water_velocity', 'sea_surface_wave_stokes_drift_y_velocity', 'ocean_mixed_layer_thickness', 'y_wind', 'sea_surface_height', 'sea_surface_wave_significant_height'][0m
+[32m14:38:17[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: https://thredds.met.no/thredds/dodsC/cmems/topaz6/dataset-topaz6-arc-15min-3km-be.ncml[0m
+[32m14:38:17[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:38:17[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: https://thredds.met.no/thredds/dodsC/cmems/topaz6/dataset-topaz6-arc-15min-3km-be.ncml
+[32m14:38:25[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:119:[0m [32mFinding coordinate variables.[0m
+[32m14:38:25[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:134:[0m [32mParsing CF grid mapping dictionary: {'grid_mapping_name': 'polar_stereographic', 'latitude_of_projection_origin': 90.0, 'longitude_of_projection_origin': -45.0, 'scale_factor_at_projection_origin': 1.0, 'straight_vertical_longitude_from_pole': -45.0, 'earth_radius': 6378273.0, 'proj4': '+proj=stere +lon_0=-45 +lat_0=90 +k=1 +R=6378273 +no_defs', 'false_easting': 0.0, 'false_northing': 0.0}[0m
+[32m14:38:26[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:314:[0m Detected dimensions: {'x': 'x', 'y': 'y', 'time': 'time'}
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 4 for reader https://thredds.met.no/thredds/dodsC/cmems/topaz6/dataset-topaz6-arc-15min-3km-be.ncml, assuming a maximum average speed of 5 m/s and time span of 0:15:00[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader:176:[0m [32mVariable mapping: ['sea_floor_depth_below_sea_level'] -> ['land_binary_mask'] is not activated[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['x_sea_water_velocity', 'y_sea_water_velocity'] -> sea_water_speed[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:153:[0m [32mClearing cache for reader https://thredds.met.no/thredds/dodsC/cmems/topaz6/dataset-topaz6-arc-15min-3km-be.ncml before starting new simulation[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 3 for reader https://thredds.met.no/thredds/dodsC/cmems/topaz6/dataset-topaz6-arc-15min-3km-be.ncml, assuming a maximum average speed of 2 m/s and time span of 0:15:00[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:549:[0m [32mNothing more to prepare for https://thredds.met.no/thredds/dodsC/cmems/topaz6/dataset-topaz6-arc-15min-3km-be.ncml[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:72:[0m [32mReader initialised: https://thredds.met.no/thredds/dodsC/cmems/topaz6/dataset-topaz6-arc-15min-3km-be.ncml[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 3 for reader https://thredds.met.no/thredds/dodsC/cmems/topaz6/dataset-topaz6-arc-15min-3km-be.ncml, assuming a maximum average speed of 2 m/s and time span of 0:15:00[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (too far north): https://thredds.met.no/thredds/dodsC/cmems/topaz6/dataset-topaz6-arc-15min-3km-be.ncml[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:581:[0m [32mVariables not covered by any reader: ['surface_downward_x_stress', 'sea_surface_wave_stokes_drift_x_velocity', 'sea_surface_wave_period_at_variance_spectral_density_maximum', 'sea_floor_depth_below_sea_level', 'surface_downward_y_stress', 'turbulent_generic_length_scale', 'ocean_vertical_diffusivity', 'sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment', 'turbulent_kinetic_energy', 'x_sea_water_velocity', 'x_wind', 'y_sea_water_velocity', 'upward_sea_water_velocity', 'sea_surface_wave_stokes_drift_y_velocity', 'ocean_mixed_layer_thickness', 'y_wind', 'sea_surface_height', 'sea_surface_wave_significant_height'][0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: /vol/vvfelles/opendrift/forcing_data/topaz6/topaz6_aggregate.nc[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:38:26[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/topaz6/topaz6_aggregate.nc
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/topaz6/topaz6_aggregate.nc with <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:38:26[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:150:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/topaz6/topaz6_aggregate.nc
+[32m14:38:26[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:167:[0m Opening file with Dataset
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/topaz6/topaz6_aggregate.nc with <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:38:26[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:98:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/topaz6/topaz6_aggregate.nc
+[32m14:38:26[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:103:[0m Opening file with Dataset
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/topaz6/topaz6_aggregate.nc with <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:413:[0m [32mReader could not be initialised[0m
+[32m14:38:26[0m [1;35mWARNING[0m [34mopendrift.models.basemodel.environment:414:[0m [33mReader could not be initialised, and is discarded: LazyReader: /vol/vvfelles/opendrift/forcing_data/topaz6/topaz6_aggregate.nc[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (could not be initialized): LazyReader: /vol/vvfelles/opendrift/forcing_data/topaz6/topaz6_aggregate.nc[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: https://thredds.met.no/thredds/dodsC/aromearcticlatest/latest/arome_arctic_lagged_12_h_latest_2_5km_latest.nc[0m
+[32m14:38:26[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:38:26[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: https://thredds.met.no/thredds/dodsC/aromearcticlatest/latest/arome_arctic_lagged_12_h_latest_2_5km_latest.nc
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:119:[0m [32mFinding coordinate variables.[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:231:[0m [32m4 ensemble members available[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:134:[0m [32mParsing CF grid mapping dictionary: {'grid_mapping_name': 'lambert_conformal_conic', 'standard_parallel': array([77.5, 77.5]), 'longitude_of_central_meridian': -25.0, 'latitude_of_projection_origin': 77.5, 'earth_radius': 6371000.0}[0m
+[32m14:38:28[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:314:[0m Detected dimensions: {'time': 'time', 'x': 'x', 'y': 'y'}
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:350:[0m [32mSkipped variables without standard_name: ['fog_area_fraction'][0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 10 for reader https://thredds.met.no/thredds/dodsC/aromearcticlatest/latest/arome_arctic_lagged_12_h_latest_2_5km_latest.nc, assuming a maximum average speed of 5 m/s and time span of 1:00:00[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader:176:[0m [32mVariable mapping: ['sea_floor_depth_below_sea_level'] -> ['land_binary_mask'] is not activated[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['x_wind', 'y_wind'] -> wind_speed[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:153:[0m [32mClearing cache for reader https://thredds.met.no/thredds/dodsC/aromearcticlatest/latest/arome_arctic_lagged_12_h_latest_2_5km_latest.nc before starting new simulation[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 5 for reader https://thredds.met.no/thredds/dodsC/aromearcticlatest/latest/arome_arctic_lagged_12_h_latest_2_5km_latest.nc, assuming a maximum average speed of 2 m/s and time span of 1:00:00[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:549:[0m [32mNothing more to prepare for https://thredds.met.no/thredds/dodsC/aromearcticlatest/latest/arome_arctic_lagged_12_h_latest_2_5km_latest.nc[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:72:[0m [32mReader initialised: https://thredds.met.no/thredds/dodsC/aromearcticlatest/latest/arome_arctic_lagged_12_h_latest_2_5km_latest.nc[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 5 for reader https://thredds.met.no/thredds/dodsC/aromearcticlatest/latest/arome_arctic_lagged_12_h_latest_2_5km_latest.nc, assuming a maximum average speed of 2 m/s and time span of 1:00:00[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (too far north): https://thredds.met.no/thredds/dodsC/aromearcticlatest/latest/arome_arctic_lagged_12_h_latest_2_5km_latest.nc[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:581:[0m [32mVariables not covered by any reader: ['surface_downward_x_stress', 'sea_surface_wave_stokes_drift_x_velocity', 'sea_surface_wave_period_at_variance_spectral_density_maximum', 'sea_floor_depth_below_sea_level', 'surface_downward_y_stress', 'turbulent_generic_length_scale', 'ocean_vertical_diffusivity', 'sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment', 'turbulent_kinetic_energy', 'x_sea_water_velocity', 'x_wind', 'y_sea_water_velocity', 'upward_sea_water_velocity', 'sea_surface_wave_stokes_drift_y_velocity', 'ocean_mixed_layer_thickness', 'y_wind', 'sea_surface_height', 'sea_surface_wave_significant_height'][0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: /vol/vvfelles/opendrift/forcing_data/aromearctic/aromearctic_aggregate.nc[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:38:28[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/aromearctic/aromearctic_aggregate.nc
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/aromearctic/aromearctic_aggregate.nc with <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:38:28[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:150:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/aromearctic/aromearctic_aggregate.nc
+[32m14:38:28[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:167:[0m Opening file with Dataset
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/aromearctic/aromearctic_aggregate.nc with <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:38:28[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:98:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/aromearctic/aromearctic_aggregate.nc
+[32m14:38:28[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:103:[0m Opening file with Dataset
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/aromearctic/aromearctic_aggregate.nc with <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:413:[0m [32mReader could not be initialised[0m
+[32m14:38:28[0m [1;35mWARNING[0m [34mopendrift.models.basemodel.environment:414:[0m [33mReader could not be initialised, and is discarded: LazyReader: /vol/vvfelles/opendrift/forcing_data/aromearctic/aromearctic_aggregate.nc[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (could not be initialized): LazyReader: /vol/vvfelles/opendrift/forcing_data/aromearctic/aromearctic_aggregate.nc[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: cmems_obs-wind_glo_phy_nrt_l4_0.125deg_PT1H[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_copernicusmarine' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_copernicusmarine.py'>[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open cmems_obs-wind_glo_phy_nrt_l4_0.125deg_PT1H with <module 'opendrift.readers.reader_copernicusmarine' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_copernicusmarine.py'>[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:413:[0m [32mReader could not be initialised[0m
+[32m14:38:28[0m [1;35mWARNING[0m [34mopendrift.models.basemodel.environment:414:[0m [33mReader could not be initialised, and is discarded: LazyReader: cmems_obs-wind_glo_phy_nrt_l4_0.125deg_PT1H[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (could not be initialized): LazyReader: cmems_obs-wind_glo_phy_nrt_l4_0.125deg_PT1H[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd[0m
+[32m14:38:28[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:38:28[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:119:[0m [32mFinding coordinate variables.[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:258:[0m [32mLon and lat are 1D arrays - using as projection coordinates[0m
+[32m14:38:32[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:314:[0m Detected dimensions: {'time': 'time', 'x': 'longitude', 'y': 'latitude'}
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 3 for reader https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd, assuming a maximum average speed of 5 m/s and time span of 3:00:00[0m
+[32m14:38:32[0m [1;35mINFO   [0m [34mopendrift.readers.basereader:166:[0m Variable x_wind will be rotated from eastward_wind
+[32m14:38:32[0m [1;35mINFO   [0m [34mopendrift.readers.basereader:166:[0m Variable y_wind will be rotated from northward_wind
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader:176:[0m [32mVariable mapping: ['sea_floor_depth_below_sea_level'] -> ['land_binary_mask'] is not activated[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['x_wind', 'y_wind'] -> wind_speed[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:153:[0m [32mClearing cache for reader https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd before starting new simulation[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 3 for reader https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd, assuming a maximum average speed of 2 m/s and time span of 3:00:00[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:549:[0m [32mNothing more to prepare for https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:72:[0m [32mReader initialised: https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 3 for reader https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd, assuming a maximum average speed of 2 m/s and time span of 3:00:00[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: cmems_mod_glo_wav_anfc_0.083deg_PT3H-i[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_copernicusmarine' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_copernicusmarine.py'>[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open cmems_mod_glo_wav_anfc_0.083deg_PT3H-i with <module 'opendrift.readers.reader_copernicusmarine' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_copernicusmarine.py'>[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:413:[0m [32mReader could not be initialised[0m
+[32m14:38:32[0m [1;35mWARNING[0m [34mopendrift.models.basemodel.environment:414:[0m [33mReader could not be initialised, and is discarded: LazyReader: cmems_mod_glo_wav_anfc_0.083deg_PT3H-i[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (could not be initialized): LazyReader: cmems_mod_glo_wav_anfc_0.083deg_PT3H-i[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: cmems_mod_glo_phy_anfc_merged-uv_PT1H-i[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_copernicusmarine' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_copernicusmarine.py'>[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open cmems_mod_glo_phy_anfc_merged-uv_PT1H-i with <module 'opendrift.readers.reader_copernicusmarine' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_copernicusmarine.py'>[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:413:[0m [32mReader could not be initialised[0m
+[32m14:38:32[0m [1;35mWARNING[0m [34mopendrift.models.basemodel.environment:414:[0m [33mReader could not be initialised, and is discarded: LazyReader: cmems_mod_glo_phy_anfc_merged-uv_PT1H-i[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (could not be initialized): LazyReader: cmems_mod_glo_phy_anfc_merged-uv_PT1H-i[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: /vol/vvfelles/opendrift/forcing_data/mercator/mercator_aggregate.nc[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:38:32[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/mercator/mercator_aggregate.nc
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/mercator/mercator_aggregate.nc with <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:38:32[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:150:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/mercator/mercator_aggregate.nc
+[32m14:38:32[0m [1;35mINFO   [0m [34mopendrift.readers.reader_ROMS_native:167:[0m Opening file with Dataset
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/mercator/mercator_aggregate.nc with <module 'opendrift.readers.reader_ROMS_native' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_ROMS_native.py'>[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:38:32[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:98:[0m Opening dataset: /vol/vvfelles/opendrift/forcing_data/mercator/mercator_aggregate.nc
+[32m14:38:32[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_unstructured:103:[0m Opening file with Dataset
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers:88:[0m [32mCould not open /vol/vvfelles/opendrift/forcing_data/mercator/mercator_aggregate.nc with <module 'opendrift.readers.reader_netCDF_CF_unstructured' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_unstructured.py'>[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:413:[0m [32mReader could not be initialised[0m
+[32m14:38:32[0m [1;35mWARNING[0m [34mopendrift.models.basemodel.environment:414:[0m [33mReader could not be initialised, and is discarded: LazyReader: /vol/vvfelles/opendrift/forcing_data/mercator/mercator_aggregate.nc[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:498:[0m [32mDiscarding reader (could not be initialized): LazyReader: /vol/vvfelles/opendrift/forcing_data/mercator/mercator_aggregate.nc[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:57:[0m [32mInitialising: LazyReader: https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd[0m
+[32m14:38:32[0m [1;35mDEBUG  [0m [34mopendrift.readers:84:[0m [32mTesting reader <module 'opendrift.readers.reader_netCDF_CF_generic' from 'C:\\Users\\mcnis\\OneDrive\\Desktop\\PythonScripts\\Lib\\site-packages\\opendrift\\readers\\reader_netCDF_CF_generic.py'>[0m
+[32m14:38:32[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:102:[0m Opening dataset: https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:119:[0m [32mFinding coordinate variables.[0m
+[32m14:38:40[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:281:[0m Grid coordinates are detected, but proj4 string not given: assuming latlong
+[32m14:38:40[0m [1;35mINFO   [0m [34mopendrift.readers.reader_netCDF_CF_generic:314:[0m Detected dimensions: {'z': 'depth', 'y': 'lat', 'x': 'lon', 'time': 'time'}
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:350:[0m [32mSkipped variables without standard_name: ['surf_el'][0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 9 for reader https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd, assuming a maximum average speed of 5 m/s and time span of 3:00:00[0m
+[32m14:38:40[0m [1;35mINFO   [0m [34mopendrift.readers.basereader:166:[0m Variable x_sea_water_velocity will be rotated from eastward_sea_water_velocity
+[32m14:38:40[0m [1;35mINFO   [0m [34mopendrift.readers.basereader:166:[0m Variable y_sea_water_velocity will be rotated from northward_sea_water_velocity
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader:176:[0m [32mVariable mapping: ['sea_floor_depth_below_sea_level'] -> ['land_binary_mask'] is not activated[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:563:[0m [32mAdding variable mapping: ['x_sea_water_velocity', 'y_sea_water_velocity'] -> sea_water_speed[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:153:[0m [32mClearing cache for reader https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd before starting new simulation[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 5 for reader https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd, assuming a maximum average speed of 2 m/s and time span of 3:00:00[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:549:[0m [32mNothing more to prepare for https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_lazy:72:[0m [32mReader initialised: https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:608:[0m [32mSetting buffer size 5 for reader https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd, assuming a maximum average speed of 2 m/s and time span of 3:00:00[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['land_binary_mask'][0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader global_landmask[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from global_landmask covering 100 elements[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.continuous:37:[0m [32mFetched env-before[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking land_binary_mask for invalid values[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['x_wind', 'y_wind'][0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd covering 100 elements[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:213:[0m [32mShifting coordinates to 0-360[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:222:[0m [32mReader time:
+		2024-08-23 18:00:00 (before)
+		2024-08-23 21:00:00 (after)[0m
+[32m14:38:40[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:429:[0m [32mUsing eastward_wind to retrieve x_wind[0m
+[32m14:38:41[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:429:[0m [32mUsing northward_wind to retrieve y_wind[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:526:[0m [32mNorth is up, no rotation necessary[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking x_wind for invalid values[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking y_wind for invalid values[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:291:[0m [32mFetched env-block (size 6x6x1) for time before (2024-08-23 18:00:00)[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:429:[0m [32mUsing eastward_wind to retrieve x_wind[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:429:[0m [32mUsing northward_wind to retrieve y_wind[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:526:[0m [32mNorth is up, no rotation necessary[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking x_wind for invalid values[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking y_wind for invalid values[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:313:[0m [32mFetched env-block (size 6x6x1) for time after (2024-08-23 21:00:00)[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:334:[0m [32mInterpolating before (2024-08-23 18:00:00) in space  (linearNDFast)[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:340:[0m [32mInterpolating after (2024-08-23 21:00:00) in space  (linearNDFast)[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:355:[0m [32mInterpolating before (2024-08-23 18:00:00, weight 0.29) and
+		      after (2024-08-23 21:00:00, weight 0.71) in time[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['x_sea_water_velocity', 'y_sea_water_velocity'][0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd covering 100 elements[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:213:[0m [32mShifting coordinates to 0-360[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:222:[0m [32mReader time:
+		2024-08-23 18:00:00 (before)
+		2024-08-23 21:00:00 (after)[0m
+[32m14:38:42[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:429:[0m [32mUsing eastward_sea_water_velocity to retrieve x_sea_water_velocity[0m
+[32m14:38:43[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:429:[0m [32mUsing northward_sea_water_velocity to retrieve y_sea_water_velocity[0m
+[32m14:38:44[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:526:[0m [32mNorth is up, no rotation necessary[0m
+[32m14:38:44[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking x_sea_water_velocity for invalid values[0m
+[32m14:38:44[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking y_sea_water_velocity for invalid values[0m
+[32m14:38:44[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:291:[0m [32mFetched env-block (size 11x10x1) for time before (2024-08-23 18:00:00)[0m
+[32m14:38:44[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:429:[0m [32mUsing eastward_sea_water_velocity to retrieve x_sea_water_velocity[0m
+[32m14:38:45[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:429:[0m [32mUsing northward_sea_water_velocity to retrieve y_sea_water_velocity[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.reader_netCDF_CF_generic:526:[0m [32mNorth is up, no rotation necessary[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking x_sea_water_velocity for invalid values[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking y_sea_water_velocity for invalid values[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:313:[0m [32mFetched env-block (size 11x10x1) for time after (2024-08-23 21:00:00)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:334:[0m [32mInterpolating before (2024-08-23 18:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:340:[0m [32mInterpolating after (2024-08-23 21:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:355:[0m [32mInterpolating before (2024-08-23 18:00:00, weight 0.29) and
+		      after (2024-08-23 21:00:00, weight 0.71) in time[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:777:[0m [32m---------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:778:[0m [32mFinished processing all variable groups[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:798:[0m [32mCreating empty dictionary for profiles not profided by any reader: ['ocean_vertical_diffusivity'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:803:[0m [32m      Using fallback value 0 for ocean_vertical_diffusivity for all profiles[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:903:[0m [32m------------ SUMMARY -------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    x_sea_water_velocity: -0.140543 (min) -0.133113 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    y_sea_water_velocity: -0.0372908 (min) -0.0323838 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    x_wind: -8.07775 (min) -8.02617 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    y_wind: 1.63993 (min) 1.7478 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    upward_sea_water_velocity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    ocean_vertical_diffusivity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_significant_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_stokes_drift_x_velocity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_stokes_drift_y_velocity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_period_at_variance_spectral_density_maximum: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_swell_wave_to_direction: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_swell_wave_peak_period_from_variance_spectral_density: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_swell_wave_significant_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wind_wave_to_direction: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wind_wave_mean_period: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wind_wave_significant_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    surface_downward_x_stress: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    surface_downward_y_stress: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    turbulent_kinetic_energy: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    turbulent_generic_length_scale: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    ocean_mixed_layer_thickness: 50 (min) 50 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_floor_depth_below_sea_level: 10000 (min) 10000 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    land_binary_mask: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:907:[0m [32m---------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:993:[0m [32mCalculating Hs from wind, min: 1.659262, mean: 1.665271, max: 1.671714[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:1051:[0m [32mCalculating wave period Tm02 from wind[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:1061:[0m [32m   min: 7.017575, mean: 7.030267, max: 7.043857[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:1001:[0m [32mCalculating wave period from wind, min: 7.017575, mean: 7.030267, max: 7.043857[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:659:[0m [32mNo elements hit coastline.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:1710:[0m [32mNo elements to deactivate[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2109:[0m [32mCalling OceanDrift.update()[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:915:[0m [32mAdvecting 100 of 100 elements above 0.100m with wind-sheared ocean current (0.164255 m/s - 0.164871 m/s)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:933:[0m [32mNo Stokes drift velocity available[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.oceandrift:410:[0m [32mNo vertical advection for elements at surface[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:1661:[0m [32mHorizontal diffusivity is 0, no random walk.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2124:[0m [32m100 active elements (0 deactivated)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:891:[0m [32mto be seeded: 0, already seeded 100[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2037:[0m [32m======================================================================[0m
+[32m14:38:46[0m [1;35mINFO   [0m [34mopendrift.models.basemodel:2038:[0m 2024-08-23 20:22:00 - step 2 of 4 - 100 active elements (0 deactivated)
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2044:[0m [32m0 elements scheduled.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2046:[0m [32m======================================================================[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2057:[0m [32m		-17.993295288100366 <- latitude  -> -17.951701283505074[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2062:[0m [32m		-148.1216698960983 <- longitude -> -148.0761180742689[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2065:[0m [32m		z = 0.0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2068:[0m [32m---------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['land_binary_mask'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader global_landmask[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from global_landmask covering 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.continuous:37:[0m [32mFetched env-before[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking land_binary_mask for invalid values[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['x_wind', 'y_wind'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd covering 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:213:[0m [32mShifting coordinates to 0-360[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:222:[0m [32mReader time:
+		2024-08-23 18:00:00 (before)
+		2024-08-23 21:00:00 (after)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:334:[0m [32mInterpolating before (2024-08-23 18:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:340:[0m [32mInterpolating after (2024-08-23 21:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:355:[0m [32mInterpolating before (2024-08-23 18:00:00, weight 0.21) and
+		      after (2024-08-23 21:00:00, weight 0.79) in time[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['x_sea_water_velocity', 'y_sea_water_velocity'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd covering 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:213:[0m [32mShifting coordinates to 0-360[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:222:[0m [32mReader time:
+		2024-08-23 18:00:00 (before)
+		2024-08-23 21:00:00 (after)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:334:[0m [32mInterpolating before (2024-08-23 18:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:340:[0m [32mInterpolating after (2024-08-23 21:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:355:[0m [32mInterpolating before (2024-08-23 18:00:00, weight 0.21) and
+		      after (2024-08-23 21:00:00, weight 0.79) in time[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:777:[0m [32m---------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:778:[0m [32mFinished processing all variable groups[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:798:[0m [32mCreating empty dictionary for profiles not profided by any reader: ['ocean_vertical_diffusivity'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:803:[0m [32m      Using fallback value 0 for ocean_vertical_diffusivity for all profiles[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:903:[0m [32m------------ SUMMARY -------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    x_sea_water_velocity: -0.143961 (min) -0.136565 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    y_sea_water_velocity: -0.0401428 (min) -0.035419 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    x_wind: -8.13266 (min) -8.07968 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    y_wind: 1.80465 (min) 1.91334 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    upward_sea_water_velocity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    ocean_vertical_diffusivity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_significant_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_stokes_drift_x_velocity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_stokes_drift_y_velocity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_period_at_variance_spectral_density_maximum: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_swell_wave_to_direction: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_swell_wave_peak_period_from_variance_spectral_density: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_swell_wave_significant_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wind_wave_to_direction: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wind_wave_mean_period: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wind_wave_significant_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    surface_downward_x_stress: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    surface_downward_y_stress: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    turbulent_kinetic_energy: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    turbulent_generic_length_scale: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    ocean_mixed_layer_thickness: 50 (min) 50 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_floor_depth_below_sea_level: 10000 (min) 10000 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    land_binary_mask: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:907:[0m [32m---------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:993:[0m [32mCalculating Hs from wind, min: 1.692454, mean: 1.701348, max: 1.709403[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:1051:[0m [32mCalculating wave period Tm02 from wind[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:1061:[0m [32m   min: 7.087418, mean: 7.106010, max: 7.122817[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:1001:[0m [32mCalculating wave period from wind, min: 7.087418, mean: 7.106010, max: 7.122817[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:659:[0m [32mNo elements hit coastline.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:1710:[0m [32mNo elements to deactivate[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2109:[0m [32mCalling OceanDrift.update()[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:915:[0m [32mAdvecting 100 of 100 elements above 0.100m with wind-sheared ocean current (0.165890 m/s - 0.166719 m/s)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:933:[0m [32mNo Stokes drift velocity available[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.oceandrift:410:[0m [32mNo vertical advection for elements at surface[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:1661:[0m [32mHorizontal diffusivity is 0, no random walk.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2124:[0m [32m100 active elements (0 deactivated)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:891:[0m [32mto be seeded: 0, already seeded 100[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2037:[0m [32m======================================================================[0m
+[32m14:38:46[0m [1;35mINFO   [0m [34mopendrift.models.basemodel:2038:[0m 2024-08-23 20:37:00 - step 3 of 4 - 100 active elements (0 deactivated)
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2044:[0m [32m0 elements scheduled.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2046:[0m [32m======================================================================[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2057:[0m [32m		-17.99328708694981 <- latitude  -> -17.951722155212025[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2062:[0m [32m		-148.12424957224636 <- longitude -> -148.0786833514227[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2065:[0m [32m		z = 0.0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2068:[0m [32m---------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['land_binary_mask'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader global_landmask[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from global_landmask covering 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.continuous:37:[0m [32mFetched env-before[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking land_binary_mask for invalid values[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['x_wind', 'y_wind'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd covering 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:213:[0m [32mShifting coordinates to 0-360[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:222:[0m [32mReader time:
+		2024-08-23 18:00:00 (before)
+		2024-08-23 21:00:00 (after)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:334:[0m [32mInterpolating before (2024-08-23 18:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:340:[0m [32mInterpolating after (2024-08-23 21:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:355:[0m [32mInterpolating before (2024-08-23 18:00:00, weight 0.13) and
+		      after (2024-08-23 21:00:00, weight 0.87) in time[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['x_sea_water_velocity', 'y_sea_water_velocity'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd covering 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:213:[0m [32mShifting coordinates to 0-360[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:222:[0m [32mReader time:
+		2024-08-23 18:00:00 (before)
+		2024-08-23 21:00:00 (after)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:334:[0m [32mInterpolating before (2024-08-23 18:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:340:[0m [32mInterpolating after (2024-08-23 21:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:355:[0m [32mInterpolating before (2024-08-23 18:00:00, weight 0.13) and
+		      after (2024-08-23 21:00:00, weight 0.87) in time[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:777:[0m [32m---------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:778:[0m [32mFinished processing all variable groups[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:798:[0m [32mCreating empty dictionary for profiles not profided by any reader: ['ocean_vertical_diffusivity'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:803:[0m [32m      Using fallback value 0 for ocean_vertical_diffusivity for all profiles[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:903:[0m [32m------------ SUMMARY -------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    x_sea_water_velocity: -0.147331 (min) -0.140023 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    y_sea_water_velocity: -0.0430166 (min) -0.038489 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    x_wind: -8.18659 (min) -8.13234 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    y_wind: 1.96892 (min) 2.0843 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    upward_sea_water_velocity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    ocean_vertical_diffusivity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_significant_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_stokes_drift_x_velocity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_stokes_drift_y_velocity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_period_at_variance_spectral_density_maximum: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_swell_wave_to_direction: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_swell_wave_peak_period_from_variance_spectral_density: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_swell_wave_significant_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wind_wave_to_direction: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wind_wave_mean_period: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wind_wave_significant_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    surface_downward_x_stress: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    surface_downward_y_stress: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    turbulent_kinetic_energy: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    turbulent_generic_length_scale: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    ocean_mixed_layer_thickness: 50 (min) 50 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_floor_depth_below_sea_level: 10000 (min) 10000 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    land_binary_mask: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:907:[0m [32m---------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:993:[0m [32mCalculating Hs from wind, min: 1.726614, mean: 1.738547, max: 1.750275[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:1051:[0m [32mCalculating wave period Tm02 from wind[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:1061:[0m [32m   min: 7.158585, mean: 7.183271, max: 7.207469[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:1001:[0m [32mCalculating wave period from wind, min: 7.158585, mean: 7.183271, max: 7.207469[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:659:[0m [32mNo elements hit coastline.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:1710:[0m [32mNo elements to deactivate[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2109:[0m [32mCalling OceanDrift.update()[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:915:[0m [32mAdvecting 100 of 100 elements above 0.100m with wind-sheared ocean current (0.167556 m/s - 0.168700 m/s)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:933:[0m [32mNo Stokes drift velocity available[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.oceandrift:410:[0m [32mNo vertical advection for elements at surface[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:1661:[0m [32mHorizontal diffusivity is 0, no random walk.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2124:[0m [32m100 active elements (0 deactivated)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:891:[0m [32mto be seeded: 0, already seeded 100[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2037:[0m [32m======================================================================[0m
+[32m14:38:46[0m [1;35mINFO   [0m [34mopendrift.models.basemodel:2038:[0m 2024-08-23 20:52:00 - step 4 of 4 - 100 active elements (0 deactivated)
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2044:[0m [32m0 elements scheduled.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2046:[0m [32m======================================================================[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2057:[0m [32m		-17.99327525337981 <- latitude  -> -17.95174222365876[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2062:[0m [32m		-148.12686380248562 <- longitude -> -148.08128860545781[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2065:[0m [32m		z = 0.0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2068:[0m [32m---------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['land_binary_mask'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader global_landmask[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from global_landmask covering 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.continuous:37:[0m [32mFetched env-before[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking land_binary_mask for invalid values[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['x_wind', 'y_wind'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from https://pae-paha.pacioos.hawaii.edu/thredds/dodsC/ncep_global/NCEP_Global_Atmospheric_Model_best.ncd covering 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:213:[0m [32mShifting coordinates to 0-360[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:222:[0m [32mReader time:
+		2024-08-23 18:00:00 (before)
+		2024-08-23 21:00:00 (after)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:334:[0m [32mInterpolating before (2024-08-23 18:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:340:[0m [32mInterpolating after (2024-08-23 21:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:355:[0m [32mInterpolating before (2024-08-23 18:00:00, weight 0.04) and
+		      after (2024-08-23 21:00:00, weight 0.96) in time[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['x_sea_water_velocity', 'y_sea_water_velocity'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from https://www.ncei.noaa.gov/thredds-coastal/dodsC/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd covering 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:213:[0m [32mShifting coordinates to 0-360[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:222:[0m [32mReader time:
+		2024-08-23 18:00:00 (before)
+		2024-08-23 21:00:00 (after)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:334:[0m [32mInterpolating before (2024-08-23 18:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:340:[0m [32mInterpolating after (2024-08-23 21:00:00) in space  (linearNDFast)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.interpolation.structured:80:[0m [32mInitialising interpolator.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.structured:355:[0m [32mInterpolating before (2024-08-23 18:00:00, weight 0.04) and
+		      after (2024-08-23 21:00:00, weight 0.96) in time[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:777:[0m [32m---------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:778:[0m [32mFinished processing all variable groups[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:798:[0m [32mCreating empty dictionary for profiles not profided by any reader: ['ocean_vertical_diffusivity'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:803:[0m [32m      Using fallback value 0 for ocean_vertical_diffusivity for all profiles[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:903:[0m [32m------------ SUMMARY -------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    x_sea_water_velocity: -0.150651 (min) -0.143426 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    y_sea_water_velocity: -0.0459294 (min) -0.0415947 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    x_wind: -8.23954 (min) -8.17986 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    y_wind: 2.13273 (min) 2.25616 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    upward_sea_water_velocity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    ocean_vertical_diffusivity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_significant_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_stokes_drift_x_velocity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_stokes_drift_y_velocity: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_period_at_variance_spectral_density_maximum: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_swell_wave_to_direction: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_swell_wave_peak_period_from_variance_spectral_density: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_swell_wave_significant_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wind_wave_to_direction: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wind_wave_mean_period: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_surface_wind_wave_significant_height: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    surface_downward_x_stress: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    surface_downward_y_stress: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    turbulent_kinetic_energy: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    turbulent_generic_length_scale: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    ocean_mixed_layer_thickness: 50 (min) 50 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    sea_floor_depth_below_sea_level: 10000 (min) 10000 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    land_binary_mask: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:907:[0m [32m---------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:993:[0m [32mCalculating Hs from wind, min: 1.761719, mean: 1.776839, max: 1.792391[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:1051:[0m [32mCalculating wave period Tm02 from wind[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:1061:[0m [32m   min: 7.230991, mean: 7.261943, max: 7.293668[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:1001:[0m [32mCalculating wave period from wind, min: 7.230991, mean: 7.261943, max: 7.293668[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:659:[0m [32mNo elements hit coastline.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:1710:[0m [32mNo elements to deactivate[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2109:[0m [32mCalling OceanDrift.update()[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:915:[0m [32mAdvecting 100 of 100 elements above 0.100m with wind-sheared ocean current (0.169251 m/s - 0.170718 m/s)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.physics_methods:933:[0m [32mNo Stokes drift velocity available[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.oceandrift:410:[0m [32mNo vertical advection for elements at surface[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:1661:[0m [32mHorizontal diffusivity is 0, no random walk.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2124:[0m [32m100 active elements (0 deactivated)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2153:[0m [32mCleaning up[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:607:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:608:[0m [32mVariable group ['land_binary_mask'][0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:609:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:613:[0m [32mCalling reader global_landmask[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:614:[0m [32m----------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:630:[0m [32mData needed for 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:752:[0m [32mFetching variables from global_landmask covering 100 elements[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.continuous:37:[0m [32mFetched env-before[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:633:[0m [32mChecking land_binary_mask for invalid values[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.readers.basereader.variables:788:[0m [32mReader projection is latlon - rotation of vectors is not needed.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:764:[0m [32mObtained data for all elements.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:777:[0m [32m---------------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:778:[0m [32mFinished processing all variable groups[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:903:[0m [32m------------ SUMMARY -------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:905:[0m [32m    land_binary_mask: 0 (min) 0 (max)[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel.environment:907:[0m [32m---------------------------------[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:659:[0m [32mNo elements hit coastline.[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:2183:[0m [32mWriting and closing output file: opendrift.nc[0m
+[32m14:38:46[0m [1;35mINFO   [0m [34mopendrift.export.io_netcdf:116:[0m Wrote 2 steps to file opendrift.nc
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:176:[0m [32mMaking netCDF file CDM compliant with fixed dimensions[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:1710:[0m [32mNo elements to deactivate[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:281:[0m [32mImporting from opendrift.nc[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:1710:[0m [32mNo elements to deactivate[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:x_sea_water_velocity -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:x_sea_water_velocity -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:y_sea_water_velocity -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:y_sea_water_velocity -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:sea_surface_height -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:sea_surface_height -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:x_wind -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:x_wind -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:y_wind -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:y_wind -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:upward_sea_water_velocity -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:upward_sea_water_velocity -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:ocean_vertical_diffusivity -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:ocean_vertical_diffusivity -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:sea_surface_wave_significant_height -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:sea_surface_wave_significant_height -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:sea_surface_wave_stokes_drift_x_velocity -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:sea_surface_wave_stokes_drift_x_velocity -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:sea_surface_wave_stokes_drift_y_velocity -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:sea_surface_wave_stokes_drift_y_velocity -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:sea_surface_wave_period_at_variance_spectral_density_maximum -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:sea_surface_wave_period_at_variance_spectral_density_maximum -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:sea_surface_swell_wave_to_direction -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:sea_surface_swell_wave_to_direction -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:sea_surface_swell_wave_peak_period_from_variance_spectral_density -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:sea_surface_swell_wave_peak_period_from_variance_spectral_density -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:sea_surface_swell_wave_significant_height -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:sea_surface_swell_wave_significant_height -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:sea_surface_wind_wave_to_direction -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:sea_surface_wind_wave_to_direction -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:sea_surface_wind_wave_mean_period -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:sea_surface_wind_wave_mean_period -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:sea_surface_wind_wave_significant_height -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:sea_surface_wind_wave_significant_height -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:surface_downward_x_stress -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:surface_downward_x_stress -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:surface_downward_y_stress -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:surface_downward_y_stress -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:turbulent_kinetic_energy -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:turbulent_kinetic_energy -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:turbulent_generic_length_scale -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:turbulent_generic_length_scale -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:ocean_mixed_layer_thickness -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:ocean_mixed_layer_thickness -> 50[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:sea_floor_depth_below_sea_level -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:sea_floor_depth_below_sea_level -> 10000[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:constant:land_binary_mask -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: environment:fallback:land_binary_mask -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: general:use_auto_landmask -> True[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:current_uncertainty -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:current_uncertainty_uniform -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:max_speed -> 2.0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: readers:max_number_of_fails -> 1[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: general:simulation_name -> [0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: general:coastline_action -> stranding[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: general:coastline_approximation_precision -> 0.001[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: general:time_step_minutes -> 60[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: general:time_step_output_minutes -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: seed:ocean_only -> True[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: seed:number -> 1[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:max_age_seconds -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:advection_scheme -> euler[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:horizontal_diffusivity -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:profiles_depth -> 50[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:wind_uncertainty -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:relative_wind -> False[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:deactivate_north_of -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:deactivate_south_of -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:deactivate_east_of -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:deactivate_west_of -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: seed:origin_marker -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: seed:z -> 0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: seed:wind_drift_factor -> 0.02[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: seed:current_drift_factor -> 1[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: seed:terminal_velocity -> 0.0[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:vertical_advection -> True[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:vertical_mixing -> False[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: vertical_mixing:timestep -> 60[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: vertical_mixing:diffusivitymodel -> environment[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: vertical_mixing:background_diffusivity -> 1.2e-05[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: vertical_mixing:TSprofiles -> False[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:wind_drift_depth -> 0.1[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:stokes_drift -> True[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:stokes_drift_profile -> Phillips[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:use_tabularised_stokes_drift -> False[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:tabularised_stokes_drift_fetch -> 25000[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: general:seafloor_action -> lift_to_seafloor[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: drift:truncate_ocean_model_below_m -> None[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.export.io_netcdf:380:[0m [32mSetting imported config: seed:seafloor -> False[0m
+[32m14:38:46[0m [1;35mDEBUG  [0m [34mopendrift.models.basemodel:95:[0m [32mChanged mode from Mode.Result to Mode.Result[0m
+Model run complete at 2024-08-23 20:08:46. Coordinates: Longitude -148.095028, Latitude -17.973211.
