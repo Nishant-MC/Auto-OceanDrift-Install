@@ -11,7 +11,7 @@ The goal is to get a simple and idiot-proof script to install the OceanDrift pro
    - Uses py launcher to get pip
 
 2. download-project (.cmd) - DONE
-   - Clones the git repo of the OceanDrift project
+   - Downloads a .ZIP package of the OceanDrift project
    - Grabs the relevant GDAL wheel from https://github.com/cgohlke/geospatial-wheels/releases
    - Packs it all together and does any required cleanup
 
