@@ -1,4 +1,3 @@
-cd PythonScripts
 powershell -command "& {Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force}"
 pip install virtualenv virtualenvwrapper-win
 python -m virtualenv .
